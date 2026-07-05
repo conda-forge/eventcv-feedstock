@@ -10,6 +10,8 @@ package:
 source:
   url: https://pypi.org/packages/source/e/eventcv/eventcv-${{ version }}.tar.gz
   sha256: 0936650a5b74a3be0cad4de85a7c223fd047ae208f86a5ae7f535e542e693a5e
+  patches:
+    - relax-numpy-pin.patch
 
 build:
   number: 0
@@ -34,7 +36,7 @@ requirements:
     - cmake >=3.18
   run:
     - python
-    - numpy >=1.24,<2
+    - numpy >=1.24
 
 tests:
   - python:

@@ -1,0 +1,19 @@
+From: eventcv-feedstock
+Subject: Relax numpy upper bound to allow numpy 2.x
+
+numpy is a pure runtime dependency here (rust-numpy 0.29 resolves it through
+the Python API at runtime, with no build-time C-ABI linkage), so the <2 cap is
+unnecessary. It also makes the package unbuildable on Python 3.13, for which no
+numpy<2 exists. Allow the full 1.24 -> 2.x range.
+
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -14,7 +14,7 @@
+ license = { file = "LICENSE" }
+ authors = [
+   { name = "Adam Hines", email = "a.david.hines@gmail.com"}
+ ]
+ dependencies = [
+-    "numpy>=1.24,<2"
++    "numpy>=1.24"
+ ]
