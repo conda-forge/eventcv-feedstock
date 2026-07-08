@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.0.0"
+  version: "1.0.1"
 
 package:
   name: eventcv
@@ -9,12 +9,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/e/eventcv/eventcv-${{ version }}.tar.gz
-  sha256: 0936650a5b74a3be0cad4de85a7c223fd047ae208f86a5ae7f535e542e693a5e
+  sha256: 71aac7cacfbff78df2b814aec12ab8a8a1ab9b82b115d0964869dc977d485f69
   patches:
     - relax-numpy-pin.patch
 
 build:
-  number: 2
+  number: 0
   script:
     - cargo-bundle-licenses --format yaml --output ${{ SRC_DIR }}/THIRDPARTY.yml
     - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
