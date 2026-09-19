@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.0.7"
+  version: "1.0.8"
 
 package:
   name: eventcv
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/e/eventcv/eventcv-${{ version }}.tar.gz
-  sha256: d91f681ff776bab9eff86cd738747ac7f568e23c0a9ad3c7ed2440f73a81b502
+  sha256: 2c24b1d538319895cc5593b97b961b4a1388414c05c5a84efb91c25aff5cb4db
 
 build:
   number: 0
