@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.0.12"
+  version: "1.0.13"
 
 package:
   name: eventcv
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/e/eventcv/eventcv-${{ version }}.tar.gz
-  sha256: 6ebc6e003dbc89414c0bd892c664a3039fac8689b3b61e3255667a1c87081945
+  sha256: c6d33839fd3d2814f461208546a3498c5d1b85c084ff7dbabdb4ce8f81c6661b
 
 build:
   number: 0
@@ -26,7 +26,7 @@ requirements:
     - cargo-bundle-licenses
     - cmake
     - make
-    - pkg-config
+    - pkgconf
     - if: build_platform != target_platform
       then:
         - python
